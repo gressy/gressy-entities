@@ -1,0 +1,13 @@
+# Admin Panel Routes
+# To enable the admin panel, import these routes from your routes file
+
+# Auth
+POST       /login                   gressy.entities.controller.UserController.login()
+POST       /logout                  gressy.entities.controller.UserController.logout()
+
+# CRUD
+GET        /entities/:entity        gressy.entities.controller.PanelController.list(entity: String)
+POST       /entities/:entity        gressy.entities.controller.PanelController.create(entity: String)
+GET        /entities/:entity/:id    gressy.entities.controller.PanelController.read(entity: String, id: Long)
+PUT        /entities/:entity/:id    gressy.entities.controller.PanelController.update(entity: String, id: Long)
+DELETE     /entities/:entity/:id    gressy.entities.controller.PanelController.delete(entity: String, id: Long)
