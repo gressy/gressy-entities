@@ -11,3 +11,6 @@ POST       /entities/:entity        gressy.entities.controller.PanelController.c
 GET        /entities/:entity/:id    gressy.entities.controller.PanelController.read(entity: String, id: Long)
 PUT        /entities/:entity/:id    gressy.entities.controller.PanelController.update(entity: String, id: Long)
 DELETE     /entities/:entity/:id    gressy.entities.controller.PanelController.delete(entity: String, id: Long)
+
+# Schema
+GET        /schema                  gressy.entities.controller.PanelController.schema()

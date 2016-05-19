@@ -6,6 +6,7 @@ import gressy.entities.exceptions.GressyException;
 import gressy.entities.exceptions.TargetNotFoundException;
 import gressy.entities.model.Entity;
 import gressy.entities.util.EntityResponse;
+import gressy.entities.util.SchemaReader;
 import org.hibernate.Hibernate;
 import play.db.jpa.JPA;
 import play.db.jpa.JPAApi;
@@ -19,7 +20,6 @@ import javax.persistence.metamodel.EntityType;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
@@ -33,6 +33,9 @@ public class PanelController extends Controller {
 
     @Inject
     protected JPAApi jpaApi;
+
+    @Inject
+    protected SchemaReader schemaReader;
 
     private Map<String, Class<Entity>> entityClassesByName;
 
@@ -173,7 +176,7 @@ public class PanelController extends Controller {
      */
     @Transactional
     @Authenticated(role = {"admin"})
-    public Result delete( String entityType, long id) {
+    public Result delete(String entityType, long id) {
         Class<Entity> entityClass = getEntityClassByName(entityType);
 
         Entity entity = jpaApi.em().find(entityClass, id);
@@ -184,5 +187,17 @@ public class PanelController extends Controller {
 
         return ok(Json.newObject());
     }
+
+
+    /**
+     * Gets a schema with field details for all the available entities.
+     * @return A JSON schema.
+     */
+    @Transactional
+    @Authenticated(role = {"admin"})
+    public Result schema() {
+        return ok(schemaReader.getSchema());
+    }
+
 
 }
