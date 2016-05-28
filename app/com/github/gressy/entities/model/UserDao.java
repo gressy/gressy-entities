@@ -1,4 +1,4 @@
-package gressy.entities.model;
+package com.github.gressy.entities.model;
 
 import play.db.jpa.JPA;
 

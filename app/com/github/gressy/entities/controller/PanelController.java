@@ -1,12 +1,12 @@
-package gressy.entities.controller;
+package com.github.gressy.entities.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import gressy.entities.actions.Authenticated;
-import gressy.entities.exceptions.GressyException;
-import gressy.entities.exceptions.TargetNotFoundException;
-import gressy.entities.model.Entity;
-import gressy.entities.util.EntityResponse;
-import gressy.entities.util.SchemaReader;
+import com.github.gressy.entities.actions.Authenticated;
+import com.github.gressy.entities.exceptions.GressyException;
+import com.github.gressy.entities.exceptions.TargetNotFoundException;
+import com.github.gressy.entities.model.Entity;
+import com.github.gressy.entities.util.EntityResponse;
+import com.github.gressy.entities.util.SchemaReader;
 import org.hibernate.Hibernate;
 import play.db.jpa.JPA;
 import play.db.jpa.JPAApi;

@@ -1,11 +1,11 @@
-package gressy.entities.util;
+package com.github.gressy.entities.util;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.function.Function;
 import javax.inject.Inject;
 import akka.stream.Materializer;
-import gressy.entities.exceptions.GressyException;
+import com.github.gressy.entities.exceptions.GressyException;
 import play.libs.Json;
 import play.mvc.*;
 

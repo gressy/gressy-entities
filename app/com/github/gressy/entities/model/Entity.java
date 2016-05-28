@@ -1,4 +1,4 @@
-package gressy.entities.model;
+package com.github.gressy.entities.model;
 
 /**
  * Interface for all the entities that will use the Panel.
@@ -7,7 +7,7 @@ package gressy.entities.model;
  * as it will be part of the URL for the CRUD endpoints. This also allows us to make
  * a simple generic Dao for all of them.
  *
- * @see gressy.entities.model.EntityDao
+ * @see EntityDao
  */
 public interface Entity {
 

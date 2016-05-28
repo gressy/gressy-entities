@@ -1,4 +1,4 @@
-package gressy.entities.actions;
+package com.github.gressy.entities.actions;
 
 import play.mvc.With;
 
@@ -11,7 +11,7 @@ import java.lang.annotation.*;
  * You can optionally specify a list of allowed roles, and the method will
  * be restricted to users with any of those specific roles.
  *
- * @see gressy.entities.actions.AuthenticatedAction
+ * @see AuthenticatedAction
  */
 @With(AuthenticatedAction.class)
 @Retention(RetentionPolicy.RUNTIME)

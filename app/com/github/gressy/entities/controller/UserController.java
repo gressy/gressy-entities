@@ -1,11 +1,11 @@
-package gressy.entities.controller;
+package com.github.gressy.entities.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import gressy.entities.exceptions.GressyException;
-import gressy.entities.exceptions.NotLoggedInException;
-import gressy.entities.model.User;
-import gressy.entities.model.UserDao;
+import com.github.gressy.entities.exceptions.NotLoggedInException;
+import com.github.gressy.entities.model.User;
+import com.github.gressy.entities.model.UserDao;
+import com.github.gressy.entities.exceptions.GressyException;
 import play.db.jpa.Transactional;
 import play.libs.Json;
 import play.mvc.Controller;

@@ -1,4 +1,4 @@
-package gressy.entities.exceptions;
+package com.github.gressy.entities.exceptions;
 
 /**
  * Lightweight exception for easily classify and return API errors to the client.

@@ -1,4 +1,4 @@
-package gressy.entities.exceptions;
+package com.github.gressy.entities.exceptions;
 
 public class ModelException extends GressyException {
 

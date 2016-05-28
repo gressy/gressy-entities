@@ -1,10 +1,10 @@
-package gressy.entities.actions;
+package com.github.gressy.entities.actions;
 
+import com.github.gressy.entities.exceptions.NotLoggedInException;
+import com.github.gressy.entities.model.User;
+import com.github.gressy.entities.model.UserDao;
 import com.google.inject.Inject;
-import gressy.entities.exceptions.NotAllowedException;
-import gressy.entities.exceptions.NotLoggedInException;
-import gressy.entities.model.User;
-import gressy.entities.model.UserDao;
+import com.github.gressy.entities.exceptions.NotAllowedException;
 import play.mvc.Action;
 import play.mvc.Http;
 import play.mvc.Result;
@@ -12,9 +12,9 @@ import play.mvc.Result;
 import java.util.concurrent.CompletionStage;
 
 /**
- * Action for runtime checking of the {@link gressy.entities.actions.Authenticated @Authenticated} annotation.
+ * Action for runtime checking of the {@link Authenticated @Authenticated} annotation.
  *
- * @see gressy.entities.actions.Authenticated
+ * @see Authenticated
  */
 public class AuthenticatedAction extends Action<Authenticated> {
 

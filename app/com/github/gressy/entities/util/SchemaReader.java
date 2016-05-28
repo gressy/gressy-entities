@@ -1,4 +1,4 @@
-package gressy.entities.util;
+package com.github.gressy.entities.util;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import play.db.jpa.JPAApi;

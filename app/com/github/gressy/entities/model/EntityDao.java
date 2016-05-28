@@ -1,4 +1,4 @@
-package gressy.entities.model;
+package com.github.gressy.entities.model;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -9,7 +9,7 @@ import play.db.jpa.JPA;
  * Base class for all the DAOs using Entity descendants.
  * Do not subclass more than one level, or with generic types!
  */
-public class EntityDao<Entity extends gressy.entities.model.Entity> {
+public class EntityDao<Entity extends com.github.gressy.entities.model.Entity> {
 
     // Hack to know Entity.class real value after type erasure.
     protected Class<Entity> entityClass;

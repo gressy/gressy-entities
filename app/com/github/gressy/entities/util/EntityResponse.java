@@ -1,7 +1,7 @@
-package gressy.entities.util;
+package com.github.gressy.entities.util;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import gressy.entities.model.Entity;
+import com.github.gressy.entities.model.Entity;
 import play.libs.Json;
 
 import java.util.ArrayList;

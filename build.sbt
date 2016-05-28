@@ -1,5 +1,5 @@
 name := "gressy-entities"
-organization := "gressy"
+organization := "com.github.gressy"
 version := "0.0.1"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)

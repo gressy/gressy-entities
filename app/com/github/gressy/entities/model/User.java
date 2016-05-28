@@ -1,10 +1,10 @@
-package gressy.entities.model;
+package com.github.gressy.entities.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import gressy.entities.exceptions.InvalidValueException;
-import gressy.entities.util.serializers.UserPasswordSerializer;
+import com.github.gressy.entities.exceptions.InvalidValueException;
+import com.github.gressy.entities.util.serializers.UserPasswordSerializer;
 import org.mindrot.jbcrypt.BCrypt;
 import play.data.validation.Constraints;
 
@@ -26,7 +26,7 @@ import javax.validation.constraints.NotNull;
 @javax.persistence.Entity
 @Inheritance
 @DiscriminatorColumn(name="role")
-public abstract class User implements Entity {
+public abstract class User implements com.github.gressy.entities.model.Entity {
 
     @Id
     @SequenceGenerator(name = "user_id_seq", sequenceName = "user_id_seq", allocationSize = 1)

@@ -1,21 +1,18 @@
-package gressy.entities.util.serializers;
+package com.github.gressy.entities.util.serializers;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import gressy.entities.model.Entity;
 
 import java.io.IOException;
 
-public class EntityToIdSerializer extends JsonSerializer<Entity> {
+public class UserPasswordSerializer extends JsonSerializer<String> {
 
     @Override
-    public void serialize(Entity entity,
+    public void serialize(String password,
                           JsonGenerator jsonGenerator,
                           SerializerProvider serializerProvider)
             throws IOException {
-        if (entity != null) {
-            jsonGenerator.writeNumber(entity.getId());
-        }
+        jsonGenerator.writeString("");
     }
 }
