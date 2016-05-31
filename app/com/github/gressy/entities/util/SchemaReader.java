@@ -10,6 +10,7 @@ import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
 import javax.validation.constraints.NotNull;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 
 public class SchemaReader {
 
@@ -62,8 +63,11 @@ public class SchemaReader {
         // Add all entities
         ObjectNode entities = Json.newObject();
         Metamodel metamodel = jpaApi.em().getMetamodel();
-        metamodel.getEntities().forEach(
-                entityType -> entities.set(entityType.getName(), getEntitySchema(entityType)));
+        metamodel.getEntities().forEach(entityType -> {
+            if (!Modifier.isAbstract(entityType.getJavaType().getModifiers())) {
+                entities.set(entityType.getName(), getEntitySchema(entityType));
+            }
+        });
         ret.set("entities", entities);
 
         return ret;
