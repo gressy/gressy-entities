@@ -1,6 +1,6 @@
 name := "gressy-entities"
 organization := "com.github.gressy"
-version := "0.0.3"
+version := "0.0.4"
 
 homepage := Some(url("https://github.com/gressy/gressy-entities"))
 licenses := Seq("BSD-style" -> url("http://www.opensource.org/licenses/bsd-license.php"))
